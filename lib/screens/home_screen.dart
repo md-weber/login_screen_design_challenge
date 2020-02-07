@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:login_screen_design_challenge/widgets/form_container_widget.dart';
+import 'package:login_screen_design_challenge/widgets/logo_widget.dart';
 
 const BoxDecoration boxDecorationBackgroundImage = const BoxDecoration(
   image: DecorationImage(
@@ -18,39 +20,34 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: boxDecorationBackgroundImage,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Center(
-              child: Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/demo_logo.jpg"),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.6),
-                          blurRadius: 6,
-                          offset: Offset(2, 6))
-                    ]),
-              ),
-            ),
-            Center(
-              child: Text(
-                "Budget Tracker",
-                style: GoogleFonts.pacifico(
-                  color: Colors.white,
-                  fontSize: 36.0,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              LogoWidget(),
+              Center(
+                child: Text(
+                  "Budget Tracker",
+                  style: GoogleFonts.pacifico(
+                    color: Colors.white,
+                    fontSize: 36.0,
+                  ),
                 ),
               ),
-            ),
-            Container(),
-            Container()
-          ],
+              FormContainerWidget(),
+              RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+                color: Color(0xFF61a7be),
+                elevation: 2.0,
+                child: Text("Register"),
+                onPressed: () {},
+              )
+            ],
+          ),
         ),
       ),
     );
