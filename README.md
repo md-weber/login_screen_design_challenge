@@ -4,6 +4,11 @@
 
 A new Flutter application.
 
+The design can be found.
+
+![Design Image](https://raw.githubusercontent.com/md-weber/login_screen_design_challenge/master/assets/design/design_from_max_weber.png)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
